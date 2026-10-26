@@ -1,0 +1,356 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Rodrigo Duarte — Lighting Design Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap">
+<style>
+:root {
+  --bg:#070707;--surface:#121211;--surface2:#1c1c1a;--fg:#f0efe8;--fg2:#a0a09a;
+  --accent:#d4a832;--accent2:#f0c855;--border:rgba(255,255,255,.08);
+  --card-shadow:0 2px 20px rgba(0,0,0,.5),0 1px 6px rgba(0,0,0,.4);
+  --radius:10px;color-scheme:dark;
+}
+html{background:#070707}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#070707;--surface:#121211;--surface2:#1c1c1a;--fg:#f0efe8;--fg2:#a0a09a;
+  --accent:#d4a832;--accent2:#f0c855;--border:rgba(255,255,255,.07);
+  --card-shadow:0 2px 20px rgba(0,0,0,.4),0 1px 6px rgba(0,0,0,.3);color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#070707;--surface:#121211;--surface2:#1c1c1a;--fg:#f0efe8;--fg2:#a0a09a;
+  --accent:#d4a832;--accent2:#f0c855;--border:rgba(255,255,255,.07);
+  --card-shadow:0 2px 20px rgba(0,0,0,.4),0 1px 6px rgba(0,0,0,.3);color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Barlow',sans-serif;font-weight:300;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:var(--bg);
+  border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;gap:16px}
+.nav-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--fg)}
+.nav-brand span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:20px}
+.nav-link{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg2);
+  text-decoration:none;transition:color .2s}
+.nav-link:hover{color:var(--accent)}
+.theme-btn{background:var(--surface);border:1px solid var(--border);color:var(--fg2);
+  padding:5px 12px;border-radius:20px;font-size:.72rem;letter-spacing:.08em;cursor:pointer;
+  text-transform:uppercase;transition:all .2s}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
+.hero{padding:80px 0 60px;max-width:820px}
+.hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;letter-spacing:.25em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:clamp(2.8rem,7vw,5rem);line-height:1.0;text-transform:uppercase;
+  letter-spacing:.02em;text-wrap:balance;margin-bottom:22px}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero-sub{font-size:1.05rem;color:var(--fg2);max-width:520px;margin-bottom:36px}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:2.2rem;line-height:1;color:var(--accent)}
+.stat-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg2)}
+.section-divider{height:1px;background:var(--border);margin:0 0 32px}
+.filters-wrap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 53px);z-index:90;
+  background:var(--bg);padding:14px 0;margin-bottom:6px;border-bottom:1px solid var(--border)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter-btn{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;letter-spacing:.1em;
+  text-transform:uppercase;padding:5px 14px;border-radius:20px;border:1px solid var(--border);
+  background:transparent;color:var(--fg2);cursor:pointer;transition:all .18s}
+.filter-btn:hover{border-color:var(--accent);color:var(--accent)}
+.filter-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.more-section{margin-bottom:60px}
+.more-list{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--border)}
+.more-item{display:grid;grid-template-columns:2fr 1.4fr 1.6fr;gap:16px;padding:12px 4px;border-bottom:1px solid var(--border);cursor:pointer;align-items:baseline}
+.more-item:hover .more-title{color:var(--accent)}
+.more-title{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase;transition:color .2s}
+.more-loc,.more-type{font-size:.82rem;color:var(--fg2)}
+@media(max-width:640px){.more-item{grid-template-columns:1fr;gap:2px}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-bottom:60px}
+.card{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);
+  overflow:hidden;box-shadow:var(--card-shadow);cursor:pointer;transition:transform .2s,box-shadow .2s;
+  display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.14),0 2px 8px rgba(0,0,0,.08)}
+.card-image{aspect-ratio:16/9;overflow:hidden;position:relative}
+.card-visual{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  font-size:2.4rem;position:relative}
+.card-visual::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 60%)}
+.card-body{padding:16px;flex:1;display:flex;flex-direction:column;gap:8px}
+.card-location{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}
+.card-title{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.08rem;line-height:1.25;color:var(--fg)}
+.card-type{font-size:.72rem;color:var(--fg2)}
+.card-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:4px}
+.tag{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;
+  border-radius:10px;background:var(--surface2);color:var(--fg2);border:1px solid var(--border)}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:flex;
+  align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(4px)}
+.modal-overlay[hidden]{display:none}
+.modal{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);
+  max-width:640px;width:100%;max-height:90vh;overflow-y:auto;
+  box-shadow:0 24px 64px rgba(0,0,0,.35)}
+.modal-hero{position:relative;overflow:hidden}.modal-img-area{position:relative;aspect-ratio:16/7}.modal-visual{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem}.gthumb-bar{display:flex;gap:8px;overflow-x:auto;background:#0b0b0a;padding:10px 16px;scroll-behavior:smooth}.gthumb-bar::-webkit-scrollbar{height:4px}.gthumb-bar::-webkit-scrollbar-thumb{background:rgba(0,0,0,.2);border-radius:2px}.gthumb{flex:0 0 110px;height:72px;border-radius:6px;background-size:cover;background-position:center;cursor:pointer;opacity:.65;transition:opacity .2s,outline .15s;outline:2px solid transparent;outline-offset:2px}.gthumb.tech{position:relative}.gthumb.tech::after{content:'TECHNICAL';position:absolute;left:4px;bottom:4px;font:600 8px/1 'Barlow Condensed',sans-serif;letter-spacing:.12em;color:#fff;background:rgba(0,0,0,.65);padding:3px 5px;border-radius:3px}
+.gthumb:hover{opacity:1}.gthumb.active{opacity:1;outline-color:var(--accent)}
+.modal-visual{width:100%;height:100%;min-height:220px;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.modal-body{padding:24px 28px 32px}
+.modal-location{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.modal-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.85rem;
+  line-height:1.1;margin-bottom:6px;text-wrap:balance}
+.modal-firm{font-size:.82rem;color:var(--fg2);margin-bottom:18px;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.modal-section-label{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:6px;margin-top:18px}
+.modal-text{font-size:.9rem;color:var(--fg2);line-height:1.65}
+.modal-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;background:rgba(0,0,0,.5);
+  border:none;border-radius:50%;color:#fff;font-size:1.1rem;cursor:pointer;display:flex;
+  align-items:center;justify-content:center;z-index:10;transition:background .2s}
+.modal-close:hover{background:rgba(0,0,0,.75)}
+.quote-section{padding:60px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:60px}
+.quote{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:300;
+  font-style:italic;line-height:1.4;max-width:680px;color:var(--fg2)}
+.quote em{color:var(--accent);font-style:normal;font-weight:600}
+footer{padding:32px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:12px}
+.footer-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--fg2)}
+.footer-firm{color:var(--accent)}
+.footer-note{font-size:.75rem;color:var(--fg2)}
+.grad-gold{background:linear-gradient(135deg,#1a1208 0%,#3d2c08 40%,#6b4e12 70%,#c8972a 100%)}
+.grad-blue{background:linear-gradient(135deg,#080d1a 0%,#0d1f3d 40%,#1a3a6b 70%,#2a5fa8 100%)}
+.grad-teal{background:linear-gradient(135deg,#080e10 0%,#0d2a2e 40%,#12484f 70%,#1a7a85 100%)}
+.grad-rose{background:linear-gradient(135deg,#180810 0%,#3d0c20 40%,#6b1235 70%,#c82a55 100%)}
+.grad-green{background:linear-gradient(135deg,#081208 0%,#0d2a0d 40%,#1a4a1a 70%,#2a8530 100%)}
+.grad-purple{background:linear-gradient(135deg,#100818 0%,#2a0d40 40%,#4a1570 70%,#8030b8 100%)}
+.grad-warm{background:linear-gradient(135deg,#180e06 0%,#3d2008 40%,#6b3812 70%,#c86028 100%)}
+.grad-silver{background:linear-gradient(135deg,#0a0a0c 0%,#1a1a20 40%,#2a2a38 70%,#4a4a60 100%)}
+.grad-sand{background:linear-gradient(135deg,#181410 0%,#3a2e20 40%,#6a5038 70%,#b88860 100%)}
+.grad-night{background:linear-gradient(135deg,#050508 0%,#0a0a18 40%,#121228 70%,#1a1a40 100%)}
+@media(max-width:600px){
+  .hero{padding:48px 0 36px}.hero-stats{gap:20px}
+  .grid{grid-template-columns:1fr;gap:12px}
+  footer{flex-direction:column;align-items:flex-start}
+}
+
+@media(hover:hover){
+.card-image::after{content:'';position:absolute;inset:0;background:#000;opacity:.68;pointer-events:none;transition:opacity 1.1s ease-in-out;z-index:2}
+.card:hover .card-image::after{opacity:0;transition:opacity 1.1s ease-in-out}
+.card{transition:transform .4s ease,box-shadow 1.1s ease-in-out,border-color 1.1s ease-in-out}
+.card:hover{border-color:rgba(255,170,60,.6);box-shadow:0 0 14px rgba(255,170,60,.35),0 0 60px rgba(255,160,40,.32),0 10px 34px rgba(0,0,0,.65)}
+.card-image::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 115%,rgba(255,170,60,.55) 0%,rgba(255,150,40,.18) 45%,transparent 72%);mix-blend-mode:screen;opacity:0;pointer-events:none;transition:opacity 1.1s ease-in-out;z-index:3}
+.card:hover .card-image::before{opacity:1}
+.card:hover .card-title{color:#ffc15a;text-shadow:0 0 14px rgba(255,170,60,.5)}
+.card-title{transition:color 1.1s ease-in-out,text-shadow 1.1s ease-in-out}
+}
+@media(prefers-reduced-motion:reduce){.card-image::after,.card:hover .card-image::after{transition:none}}
+.more-item .more-title{text-shadow:0 0 0 rgba(212,168,50,0);transition:color .6s,text-shadow .6s}
+@media(hover:hover){.more-item:hover .more-title{text-shadow:0 0 18px rgba(255,170,60,.75)}}
+.theme-btn{display:none}
+</style>
+
+<nav>
+  <div class="nav-brand">Rodrigo <span>Duarte</span></div>
+  <div class="nav-right">
+    <a href="https://www.linkedin.com/in/rodrigo-d-77486437" target="_blank" rel="noopener" class="nav-link">LINKEDIN PROFILE</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">Architectural Lighting Design</div>
+  <h1>Shaping Space<br>Through <em>Light</em></h1>
+  <p class="hero-sub">Architect and Senior Lighting Designer with 10+ years of experience and 50+ projects across hospitality, residential, cultural, retail, and public realm on 4 continents.</p>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Years Experience</span></div>
+    <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Projects</span></div>
+    <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Countries</span></div>
+    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Continents</span></div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="filters-wrap">
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterCards('all',this)">All (20)</button>
+    <button class="filter-btn" onclick="filterCards('hospitality',this)">Hospitality</button>
+    <button class="filter-btn" onclick="filterCards('residential',this)">Residential</button>
+    <button class="filter-btn" onclick="filterCards('cultural',this)">Cultural</button>
+    <button class="filter-btn" onclick="filterCards('retail',this)">Retail</button>
+    <button class="filter-btn" onclick="filterCards('public',this)">Public Realm</button>
+    <button class="filter-btn" onclick="filterCards('commercial',this)">Commercial</button>
+    <button class="filter-btn" onclick="filterCards('automotive',this)">Automotive</button>
+  </div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="more-section">
+  <div class="modal-section-label">More Projects</div>
+  <ul class="more-list" id="moreList"></ul>
+</div>
+
+<div class="quote-section">
+  <p class="quote">"Lighting is not about illuminating a building. It is about deciding what the night <em>remembers</em> of it."</p>
+</div>
+
+<footer>
+  <div class="footer-brand">Rodrigo Duarte</div>
+  <div class="footer-note">BA Architecture · MA Architectural Lighting Design · English &amp; Spanish</div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay" hidden onclick="handleOverlayClick(event)">
+  <div class="modal" id="modalBox">
+    <div class="modal-hero">
+      <div class="modal-img-area" id="modalImgArea">
+        <div class="modal-visual" id="modalVisual"></div>
+        <button class="modal-close" onclick="closeModal()">&#10005;</button>
+      </div>
+      <div id="modalThumbBar" class="gthumb-bar" style="display:none"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-location" id="modalLocation"></div>
+      <div class="modal-title" id="modalTitle"></div>
+      <div style="font-size:.7rem;letter-spacing:.12em;color:var(--fg2);opacity:.7;margin-bottom:2px;font-family:'Barlow Condensed',sans-serif">LIGHTING DESIGN BY RODRIGO DUARTE AT</div>
+      <div class="modal-firm" id="modalFirm"></div>
+      <div class="modal-section-label">Scope</div>
+      <div class="modal-text" id="modalScope"></div>
+      <div id="modalSiteWrap">
+        <div class="modal-section-label">Site Supervision</div>
+        <div class="modal-text" id="modalSite"></div>
+      </div>
+      <div id="modalConceptWrap">
+        <div class="modal-section-label">Design Concept</div>
+        <div class="modal-text" id="modalConcept"></div>
+      </div>
+      <div class="modal-tags" id="modalTags"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.documentElement.setAttribute("data-theme","dark");
+const P=[
+{id:1,img_card:"img/p1_card1.jpg",img_modal:"img/p1_modal1.jpg",img_gallery:["img/p1_photo1.jpg"],img_tech:["img/p1_tech1.jpg","img/p1_tech2.jpg"],title:"Mercedes-Benz Museum",location:"Stuttgart, Germany",firm:"Ulrike Brandi Licht",type:"Museum · Automotive Heritage",cats:["cultural","automotive"],grad:"grad-silver",icon:"🏛️",scope:"Architectural and exhibit lighting design for the iconic double-helix museum. Interior circulation lighting, gallery showcase illumination, facade accent and nighttime landmark presence.",concept:"A precise, technical palette echoing automotive engineering: cool-white task lighting over 3000K warm accent. Beam angles tuned to reveal chrome surfaces and body curves without glare, creating a cinematic showroom quality across 8 levels.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:2,img_card:"img/p2_card1.jpg",img_modal:"img/p2_modal1.jpg",img_gallery:["img/p2_photo1.jpg","img/p2_photo2.jpg"],img_tech:["img/p2_tech1.jpg","img/p2_tech2.jpg"],title:"Chadstone Shopping Centre",location:"Melbourne, Australia",firm:"Electrolight",type:"Retail · Fashion Hub",cats:["retail"],grad:"grad-purple",icon:"🛍️",scope:"Lighting design for Australia's largest fashion destination. RGBW dynamic ceiling installation, retail storefront lighting strategy, food court ambient layers and exterior approach lighting.",concept:"The centrepiece: an RGBW LED grid shell over the atrium creating a living, colour-shifting canopy. Retail zones use high-CRI (Ra>92) warm-white luminaires to enhance merchandise, while dynamic colour scenes mark seasonal events.",tags:["Interior Lighting"]},
+{id:3,img_card:"img/p3_card1.png",img_gallery:["img/p3_photo1.jpg","img/p3_photo2.jpg","img/p3_photo3.jpg"],img_tech:["img/p3_tech1.jpg"],title:"Melbourne Girls Grammar School",location:"Melbourne, Australia",firm:"Electrolight",type:"Educational · Facade",cats:["cultural","commercial"],grad:"grad-warm",icon:"🎓",scope:"Facade and entry lighting for heritage and new building integration, with copper louvre illumination at the new building and a warm 2700K grazing light strategy that amplifies the bronze material at dusk — creating a lantern effect that signals the school's presence on the streetscape. Interior zones balance WELL Building Standard L03 requirements for student concentration with welcoming, social learning environments.",concept:"",tags:["Interior Lighting","Facade Lighting"]},
+{id:4,img_card:"img/p4_card1.jpg",img_gallery:["img/p4_photo1.jpg","img/p4_photo2.jpg","img/p4_photo3.jpg"],img_tech:["img/p4_tech1.jpg","img/p4_tech2.jpg"],title:"La Luna Crescent",location:"Baku, Azerbaijan",firm:"Light Alliance",type:"Hospitality · Resort Hotel",cats:["hospitality"],grad:"grad-blue",icon:"🌙",scope:"Full architectural lighting for a crescent-shaped luxury resort on the Caspian Sea. Facade wash, pool terrace, restaurant and event spaces, ballroom, penthouse suite and amenity lighting.",concept:"The crescent form demanded a narrative of gradual discovery — warm 2700K amber hospitality at interior thresholds, with facade lighting using colour-temperature-shifting LEDs to mirror the natural colour transition from golden sunset to deep twilight over the Caspian.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:5,img_card:"img/p5_card1.jpg",img_tech:["img/p5_tech1.jpg","img/p5_tech2.jpg","img/p5_tech3.jpg","img/p5_tech4.jpg"],site:"Through to project completion: regular site visits to inspect the installation against the lighting design and approved shop drawings, review of contractor submittals and samples, witnessing of mock-ups, checking of fixture positions and mounting details, aiming and focusing of luminaires, support for control system commissioning and scene programming, site reports and snagging lists, and verification of the final handover.",title:"Jumeirah Al Sahel Resort",location:"Abu Dhabi, Bahrain",firm:"Light Alliance",type:"Luxury Resort",cats:["hospitality"],grad:"grad-gold",icon:"🏝️",scope:"Lighting design for a beachfront luxury resort including hotel facade, pool deck and beach club, F&B outlets, spa and wellness areas, arrival porte-cochère and landscape lighting.",concept:"A biophilic lighting strategy: all exterior luminaires at 2200K warm amber to support the resort's coastal setting and minimise marine light pollution. Interior F&B spaces layer warm candlelight-effect pendants over dimmable ambient coves for an intimate evening dining mood.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:6,img_card:"img/p6_card1.jpg",img_tech:["img/p6_tech1.jpg","img/p6_tech2.jpg"],title:"La Residenze",location:"Bahrain",firm:"Light Alliance",type:"Luxury Residential Tower",cats:["residential"],grad:"grad-rose",icon:"🏙️",scope:"Full MEP lighting design for a premium residential tower. Facade crown illumination, lobby and arrival sequence, amenity deck and pool, typical floor corridors and unit interior lighting guidelines.",concept:"The tower's crown is treated as a vertical lantern — warm white LED profiles trace the architectural fins from mid-height to apex, creating a recognisable nighttime silhouette. Lobby lighting layers warm downlights with linear cove detailing at 2700K Ra90+.",tags:["Facade Lighting"]},
+{id:7,img_card:"img/p7_card1.jpg",img_tech:["img/p7_tech1.jpg","img/p7_tech2.jpg"],title:"Icon Bay Tower",location:"Dubai Creek Harbour, UAE",firm:"Light Alliance",type:"Residential Tower · Waterfront",cats:["residential"],grad:"grad-night",icon:"🌃",scope:"Architectural lighting for twin residential towers at Dubai Creek Harbour. Facade feature lighting, podium and pool deck, lobby sequence, retail activation and waterfront promenade lighting coordination.",concept:"A warm golden crown with vertical light fins stepping down the facade creates a beacon visible from the creek. Podium retail uses 3000K Ra90 to activate the waterfront promenade and anchor the towers to their landscape context.",tags:["Facade Lighting"]},
+{id:8,img_card:"img/p8_card1.jpg",img_gallery:["img/p8_photo1.jpg"],img_tech:["img/p8_tech1.jpg","img/p8_tech2.jpg","img/p8_tech3.jpg","img/p8_tech4.jpg"],title:"Vida Dubai Mall",location:"Downtown Dubai, UAE",firm:"Light Alliance",type:"Hotel · Mixed-Use",cats:["hospitality","commercial"],grad:"grad-gold",icon:"🏨",scope:"Lighting design for two Vida-branded hotel towers adjacent to Dubai Mall. Rooftop bar and pool, lobby and F&B, facade feature lighting, shared amenity levels and retail podium.",concept:"The rooftop pool and bar demand a cinematic nightscape with Burj Khalifa as backdrop. Recessed deck lighting at 2200K warm amber with dimmable LED strips in the pool vanishing edges creates an immersive luxury environment.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:9,img_card:"img/p9_card1.jpg",img_tech:["img/p9_tech1.jpg","img/p9_tech2.jpg","img/p9_tech3.jpg"],title:"Mina Al Arab Public Realm",location:"Ras Al Khaimah, UAE",firm:"Light Alliance",type:"Landscape · Public Realm",cats:["public"],grad:"grad-teal",icon:"🌊",scope:"Master plan lighting for the Mina Al Arab waterfront island. Promenade, park and landscape lighting, marina edge, bridge and gateway feature lighting, and dark-sky compliant residential zone lighting.",concept:"IDA dark-sky sensitive approach: all luminaires below 3000K with full-cutoff optics and ULR < 1%. Low-level bollards and ground-recessed washers preserve views to the night sky and minimise marine wildlife disruption along the mangrove edge.",tags:["Landscape Lighting"]},
+{id:10,img_card:"img/p10_card1.jpg",img_gallery:["img/p10_photo1.jpg","img/p10_photo2.jpg","img/p10_photo3.jpg","img/p10_photo4.jpg"],img_tech:["img/p10_tech1.jpg"],title:"As Safiyyah Museum & Park",location:"Madinah, Saudi Arabia",firm:"Light Alliance",type:"Cultural · Museum",cats:["cultural"],grad:"grad-sand",icon:"🏔️",scope:"Architectural and exhibit lighting for a major cultural institution in Madinah. Facade wash lighting, landscape park integration, gallery exhibit lighting, circulation and wayfinding, and prayer space sensitivity.",concept:"The museum's amber horizontal 'lava lines' facade — cast stone bands with integrated LED profiles — creates a dignified nighttime image referencing the geological landscape of the Hejaz. Interior gallery lighting uses 15°–25° spotlights at Ra>93 for museum-grade colour fidelity.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:39,img_card:"img/p39_card1.jpg",img_gallery:["img/p39_photo1.jpg","img/p39_photo2.jpg"],img_tech:["img/p39_tech1.jpg","img/p39_tech2.jpg"],site:"Through to project completion: regular site visits to inspect the installation against the lighting design and approved shop drawings, review of contractor submittals and samples, witnessing of mock-ups, checking of fixture positions and mounting details, aiming and focusing of luminaires, support for control system commissioning and scene programming, site reports and snagging lists, and verification of the final handover.",title:"Al Wakrah Stadium",location:"Doha, Qatar",firm:"MasQ",type:"Sports · FIFA 2022",cats:["cultural","public"],grad:"grad-teal",icon:"⚽",scope:"Contribution to lighting coordination for the Al Wakrah Stadium — a FIFA 2022 World Cup venue designed by Zaha Hadid Architects, with distinctive dhow-sail facade.",tags:["Facade Lighting","Landscape Lighting"]},
+{id:14,img_card:"img/p14_card1.jpg",img_gallery:["img/p14_photo1.jpg","img/p14_photo2.jpg"],title:"Playa del Sol",location:"Ras Al Khaimah, UAE",firm:"Umaya Lighting",type:"Residential · Beachfront",cats:["residential"],grad:"grad-rose",icon:"🏖️",scope:"Architectural lighting for beachfront residential community in RAK, including villas, amenity club, pool and landscape lighting.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:11,img_card:"img/p11_card1.jpg",img_gallery:["img/p11_photo1.jpg"],img_tech:["img/p11_tech1.jpg","img/p11_tech2.jpg","img/p11_tech3.jpg","img/p11_tech4.jpg"],title:"Ellington Cove A & B",location:"Dubai Island, UAE",firm:"Umaya Lighting",type:"Luxury Residential · Waterfront",cats:["residential"],grad:"grad-blue",icon:"🌊",scope:"Architectural lighting design for twin waterfront residential buildings on Dubai Island. Facade, landscape, amenity and unit interior lighting concept.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:16,img_card:"img/p16_card1.jpg",img_gallery:["img/p16_photo1.jpg","img/p16_photo2.jpg","img/p16_photo3.jpg","img/p16_photo4.jpg"],img_tech:["img/p16_tech1.jpg","img/p16_tech2.jpg","img/p16_tech3.jpg"],title:"The Dive Four Seasons",location:"Abu Dhabi, UAE",firm:"Umaya Lighting",type:"Hospitality · Beach Club",cats:["hospitality"],grad:"grad-teal",icon:"🏄",scope:"Lighting concept design for a private beach club operated by Four Seasons in Abu Dhabi. Pool, beach deck, F&B and arrival sequence.",tags:["Facade Lighting","Landscape Lighting"]},
+{id:20,img_card:"img/p20_card1.jpg",img_gallery:["img/p20_photo1.jpg","img/p20_photo2.jpg"],img_tech:["img/p20_tech1.jpg","img/p20_tech2.jpg","img/p20_tech3.jpg"],title:"The Dive Rosewood",location:"Abu Dhabi, UAE",firm:"Umaya Lighting",type:"Hospitality · Beach Club",cats:["hospitality"],grad:"grad-teal",icon:"🌅",scope:"Lighting design for a luxury Rosewood-branded beach club in Abu Dhabi. Arrival, pool, beach bar, cabana and sunset terrace zones.",tags:["Facade Lighting","Landscape Lighting"]},
+{id:21,img_card:"img/p21_card1.jpg",img_gallery:["img/p21_photo1.jpg","img/p21_photo2.jpg"],img_tech:["img/p21_tech1.jpg","img/p21_tech2.jpg","img/p21_tech3.jpg"],site:"Through to project completion: regular site visits to inspect the installation against the lighting design and approved shop drawings, review of contractor submittals and samples, witnessing of mock-ups, checking of fixture positions and mounting details, aiming and focusing of luminaires, support for control system commissioning and scene programming, site reports and snagging lists, and verification of the final handover.",title:"Nobu Hotel & Residences",location:"Abu Dhabi, UAE",firm:"Umaya Lighting",type:"Lifestyle Hotel · Restaurant",cats:["hospitality","residential"],grad:"grad-night",icon:"🎌",scope:"Architectural and interior lighting for the Nobu Hotel and Residences in Abu Dhabi, including the signature restaurant, bar and pool terrace.",tags:["Facade Lighting","Landscape Lighting"]},
+{id:28,img_card:"img/p28_card1.jpg",img_gallery:["img/p28_photo1.jpg","img/p28_photo2.jpg","img/p28_photo3.jpg","img/p28_photo4.jpg","img/p28_photo5.jpg","img/p28_photo6.jpg","img/p28_photo7.jpg","img/p28_photo8.jpg"],site:"Through to project completion: regular site visits to inspect the installation against the lighting design and approved shop drawings, review of contractor submittals and samples, witnessing of mock-ups, checking of fixture positions and mounting details, aiming and focusing of luminaires, support for control system commissioning and scene programming, site reports and snagging lists, and verification of the final handover.",title:"Marsa Al Arab",location:"Dubai, UAE",firm:"Light Directions",type:"Ultra-Luxury Resort",cats:["hospitality"],grad:"grad-gold",icon:"⛵",scope:"Architectural lighting for the Marsa Al Arab ultra-luxury resort complex, comprising hotel towers, yacht club, beach club and private island amenities.",tags:["Interior Lighting"]},
+{id:22,img_card:"img/p22_card1.jpg",img_tech:["img/p22_tech1.jpg","img/p22_tech2.jpg","img/p22_tech3.jpg"],title:"PLT Tower",location:"Dubai, UAE",firm:"Umaya Lighting",type:"Residential Tower",cats:["residential"],grad:"grad-silver",icon:"🏙️",scope:"Facade and common area lighting for a residential tower in Dubai, including lobby, amenity levels and external architectural illumination.",tags:["Facade Lighting","Landscape Lighting"]},
+{id:15,img_card:"img/p15_card1.jpg",img_gallery:["img/p15_photo1.jpg","img/p15_photo2.jpg"],img_tech:["img/p15_tech1.jpg","img/p15_tech2.jpg","img/p15_tech3.jpg","img/p15_tech4.jpg"],title:"DIFC Height Tower",location:"Dubai, UAE",firm:"Umaya Lighting",type:"Commercial · Office Tower",cats:["commercial"],grad:"grad-silver",icon:"🏢",scope:"Facade and interior lighting design for a premium commercial office tower in the Dubai International Financial Centre.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:38,img_card:"img/p38_card1.jpg",img_gallery:["img/p38_photo1.jpg","img/p38_photo2.jpg","img/p38_photo3.jpg","img/p38_photo4.jpg","img/p38_photo5.jpg","img/p38_photo6.jpg"],title:"Signia by Hilton",location:"Amman, Jordan",firm:"Light Directions",type:"Luxury Hotel",cats:["hospitality"],grad:"grad-warm",icon:"🌹",scope:"Lighting concept and design for the Signia by Hilton hotel in Amman, Jordan. Facade, lobby, spa and F&B venue lighting design.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:13,list:true,title:"City of Arabia Phase 1",location:"Dubai, UAE",firm:"Umaya Lighting",type:"Mixed-Use · Master Plan",cats:["commercial","residential"],grad:"grad-gold",icon:"🏗️",scope:"Master plan lighting strategy for City of Arabia Phase 1 mixed-use development including retail, residential and public realm zones.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:17,list:true,title:"One Residences",location:"Dubai, UAE",firm:"Light Alliance",type:"Luxury Residential Tower",cats:["residential"],grad:"grad-purple",icon:"🌃",scope:"Architectural lighting for a luxury residential tower in Dubai. Facade feature lighting, lobby, amenity and landscape zone lighting design.",tags:["Facade Lighting"]},
+{id:18,list:true,title:"The Pointe",location:"Palm Jumeirah, Dubai",firm:"Umaya Lighting",type:"Retail · Waterfront Destination",cats:["retail","public"],grad:"grad-gold",icon:"🛍️",scope:"Lighting design for The Pointe retail and F&B destination at the tip of Palm Jumeirah, including waterfront promenade, restaurant terraces and feature lighting.",tags:["Landscape Lighting"]},
+{id:19,list:true,title:"W130 Villa",location:"Dubai, UAE",firm:"Umaya Lighting",type:"Private Villa · Bespoke",cats:["residential"],grad:"grad-warm",icon:"🏡",scope:"Bespoke lighting design for a high-end private villa in Dubai. Interior architectural lighting, art illumination, landscape and pool lighting.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:23,list:true,title:"Meydan 1 District 1",location:"Dubai, UAE",firm:"Light Directions",type:"Mixed-Use · Master Plan",cats:["residential","commercial","public"],grad:"grad-gold",icon:"🏗️",scope:"Lighting master plan for the Meydan 1 District 1 development, integrating residential, commercial and public realm zones along the race track corridor.",tags:["Interior Lighting"]},
+{id:25,list:true,title:"Hudayriyat Al Sahl",location:"Abu Dhabi, UAE",firm:"Umaya Lighting",type:"Public Realm · Leisure",cats:["public"],grad:"grad-sand",icon:"🌿",scope:"Public realm and landscape lighting for Hudayriyat Island's Al Sahl district. Promenade, cycling track, beach and community park lighting.",tags:["Landscape Lighting"]},
+{id:26,list:true,title:"Habtoor Polo Resort",location:"Dubai, UAE",firm:"Light Alliance",type:"Hospitality · Equestrian",cats:["hospitality"],grad:"grad-green",icon:"🐎",scope:"Lighting design for a luxury polo resort hotel in Dubai, including stables, outdoor polo arenas, hotel facade, spa and F&B venues.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:27,list:true,title:"Dubai Creek Harbour",location:"Dubai, UAE",firm:"Light Alliance",type:"Master Plan · Waterfront",cats:["public","residential","commercial"],grad:"grad-blue",icon:"🌉",scope:"Contribution to the waterfront lighting master plan for Dubai Creek Harbour, coordinating lighting strategy across residential, retail, marina and public realm zones.",tags:["Landscape Lighting"]},
+{id:30,list:true,title:"Meydan Hotel",location:"Dubai, UAE",firm:"Light Directions",type:"Hospitality · Racecourse",cats:["hospitality"],grad:"grad-purple",icon:"🏆",scope:"Lighting design for the Meydan Hotel at Dubai's iconic horse racing venue, including grandstand facade, ballroom, F&B and event space lighting.",tags:["Interior Lighting"]},
+{id:32,list:true,title:"King Abdullah Financial District Hotel",location:"Riyadh, Saudi Arabia",firm:"Umaya Lighting",type:"Hospitality · KAFD",cats:["hospitality"],grad:"grad-gold",icon:"🕌",scope:"Lighting design for a major international hotel within the King Abdullah Financial District masterplan in Riyadh. Facade, lobby, ballroom and F&B lighting.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:33,list:true,title:"Four Seasons Hotel Riyadh",location:"Riyadh, Saudi Arabia",firm:"Light Directions",type:"Ultra-Luxury Hotel",cats:["hospitality"],grad:"grad-sand",icon:"🌙",scope:"Architectural lighting for the Four Seasons Hotel in Riyadh. Full scope from facade to guest rooms, lobby, spa and F&B.",tags:["Interior Lighting","Facade Lighting","Landscape Lighting"]},
+{id:34,list:true,title:"Dar Al Imán",location:"Madinah, Saudi Arabia",firm:"Light Directions",type:"Luxury Hospitality · Heritage",cats:["hospitality","cultural"],grad:"grad-warm",icon:"☪️",scope:"Architectural and interior lighting for a luxury hospitality development in Madinah, designed with deep sensitivity to the sacred context and heritage of the Holy City.",tags:["Facade Lighting"]},
+{id:35,list:true,title:"Dar Al Hirja",location:"Madinah, Saudi Arabia",firm:"Light Directions",type:"Luxury Hospitality · Heritage",cats:["hospitality","cultural"],grad:"grad-sand",icon:"🕌",scope:"Lighting design for a heritage-sensitive luxury hospitality project in Madinah, adjacent to significant Islamic historical sites.",tags:["Facade Lighting"]},
+{id:36,list:true,title:"Gulf Hotel Renovation",location:"Bahrain",firm:"Light Directions",type:"Hotel · Renovation",cats:["hospitality"],grad:"grad-blue",icon:"🏨",scope:"Lighting retrofit and upgrade for the iconic Gulf Hotel in Bahrain, including lobby, ballroom, F&B outlets and external facade enhancement.",tags:["Interior Lighting"]},
+{id:37,list:true,title:"Melbourne Airport",location:"Melbourne, Australia",firm:"Electrolight",type:"Infrastructure · Aviation",cats:["commercial","public"],grad:"grad-silver",icon:"✈️",scope:"Architectural lighting design contribution for Melbourne Airport terminal expansion, including departures hall, airside concourses and landside public areas.",tags:["Interior Lighting"]},
+{id:40,list:true,title:"Doha Port",location:"Doha, Qatar",firm:"MasQ",type:"Public Realm · Waterfront",cats:["public"],grad:"grad-blue",icon:"⚓",scope:"Public realm lighting design for the Doha Port regeneration project, including port promenade, waterfront plaza, historic warehouses and marina approach lighting.",tags:["Landscape Lighting"]}
+];
+
+function buildCards(){
+  document.getElementById('grid').innerHTML=P.filter(p=>!p.list).map(p=>`
+    <div class="card" data-cats="${p.cats.join(' ')}" onclick="openModal(${p.id})">
+      <div class="card-image">${p.img_card?`<img src="${p.img_card}" loading="lazy" decoding="async" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;display:block">` : `<div class="card-visual ${p.grad}">${p.icon}</div>`}</div>
+      <div class="card-body">
+        <div class="card-location">${p.location}</div>
+        <div class="card-title">${p.title}</div>
+        <div class="card-type">${p.type}</div>
+        <div class="card-tags">${p.tags.slice(0,4).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      </div>
+    </div>`).join('');
+}
+
+
+function buildList(){
+  const byId=Object.fromEntries(P.map(p=>[p.id,p]));
+  const order=[40, 37, 33, 32, 30, 27, 34, 35, 18, 23, 36, 25, 17, 26, 13, 19];
+  document.getElementById('moreList').innerHTML=order.map(id=>byId[id]).filter(Boolean).map(p=>`
+    <li class="more-item" onclick="openModal(${p.id})"><span class="more-title">${p.title}</span><span class="more-loc">${p.location}</span><span class="more-type">${p.type}</span></li>`).join('');
+}
+function filterCards(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cats.includes(cat))?'':'none';
+  });
+}
+
+function openModal(id){
+  const p=P.find(x=>x.id===id);if(!p)return;
+  // Collect all images: card + modal + gallery
+  const mv=document.getElementById('modalVisual');
+  const tb=document.getElementById('modalThumbBar');
+  const techImgs=p.img_tech||[];
+  const allImgs=[...(p.img_card?[p.img_card]:[]),...(p.img_modal?[p.img_modal]:[]),...(p.img_gallery||[]),...techImgs];
+  function showHero(u){
+    mv.style.backgroundImage=`url(${u})`;
+    mv.style.backgroundSize='contain';
+    mv.style.backgroundRepeat='no-repeat';
+    mv.style.backgroundPosition='center';
+    mv.style.backgroundColor='#0b0b0a';
+    mv.textContent='';
+    mv.className='modal-visual';
+    tb.querySelectorAll('.gthumb').forEach(t=>t.classList.toggle('active',t.dataset.src===u));
+  }
+  if(allImgs.length){
+    showHero(allImgs[0]);
+    if(allImgs.length>1){
+      tb.innerHTML=allImgs.map((u,i)=>`<div class="gthumb${i===0?' active':''}${techImgs.includes(u)?' tech':''}" data-src="${u}" style="background-image:url(${u})" onclick="this.closest('#modalOverlay').querySelector('#modalVisual') && (()=>{document.getElementById('modalVisual').style.backgroundImage='url('+this.dataset.src+')';document.getElementById('modalVisual').style.backgroundSize='contain';document.getElementById('modalVisual').style.backgroundRepeat='no-repeat';document.getElementById('modalVisual').style.backgroundPosition='center';document.getElementById('modalVisual').style.backgroundColor='#0b0b0a';document.getElementById('modalVisual').textContent='';document.querySelectorAll('.gthumb').forEach(t=>t.classList.remove('active'));this.classList.add('active');})()"></div>`).join('');
+      tb.style.display='flex';
+    } else { tb.style.display='none'; }
+  } else {
+    mv.className=`modal-visual ${p.grad}`;mv.style.backgroundImage='';mv.textContent=p.icon;
+    tb.style.display='none';
+  }
+  document.getElementById('modalLocation').textContent=p.location;
+  document.getElementById('modalTitle').textContent=p.title;
+  document.getElementById('modalFirm').innerHTML=`<span style="color:var(--accent);font-weight:600">${p.firm}</span> &nbsp;·&nbsp; ${p.type}`;
+  document.getElementById('modalScope').textContent=p.scope;
+  const sw=document.getElementById('modalSiteWrap');
+  if(p.site){document.getElementById('modalSite').textContent=p.site;sw.style.display='';}else sw.style.display='none';
+  const cw=document.getElementById('modalConceptWrap');
+  if(p.concept){document.getElementById('modalConcept').textContent=p.concept;cw.style.display='';}
+  else cw.style.display='none';
+  document.getElementById('modalTags').innerHTML=p.tags.map(t=>`<span class="tag">${t}</span>`).join('');
+  document.getElementById('modalOverlay').hidden=false;
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(){
+  document.getElementById('modalOverlay').hidden=true;
+  document.body.style.overflow='';
+}
+
+function handleOverlayClick(e){if(e.target===document.getElementById('modalOverlay'))closeModal();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+function toggleTheme(){
+  const r=document.documentElement;
+  const isDark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  r.setAttribute('data-theme',isDark?'light':'dark');
+  document.querySelector('.theme-btn').textContent=isDark?'☽ Dark':'☀︎ Light';
+}
+
+buildCards();buildList();
+</script>
+
+</body></html>
